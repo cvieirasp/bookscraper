@@ -2,6 +2,20 @@
 
 Aplicação simples para coleta de dados do site [books.toscrape.com](https://books.toscrape.com), utilizando o framework [Scrapy](https://docs.scrapy.org/en/latest/) em Python. Ele permite extrair informações específicas de páginas web de forma eficiente e escalável.
 
+## Ambiente Virtual
+
+Comando para criação de um ambiente virtual python:
+
+```bash
+python -m venv venv
+```
+
+Comando para ativar ambiente virtual python:
+
+```bash
+source venv/bin/activate
+```
+
 ## Comandos e configurações
 
 Cria um projeto **Scrapy** no diretório `project_dir`. Se o diretório não for especificado, o diretório será igual ao nome do projeto.
@@ -47,4 +61,16 @@ Executa o spider criado:
 
 ```bash
 bookscraper$: scrapy crawl bookspider
+```
+
+Executa o spider e insere o resultado em um arquivo CSV:
+
+```bash
+bookscraper$: scrapy crawl bookspider -O data.csv
+```
+
+Executa o spider e insere o resultado em um arquivo JSON:
+
+```bash
+bookscraper$: scrapy crawl bookspider -O data.json
 ```
